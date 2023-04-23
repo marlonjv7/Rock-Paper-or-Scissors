@@ -129,17 +129,17 @@ input[id^="paper"]:checked ~ div #computer-hand .finger-4 {
 #rock-rock:checked ~ div h2::before,
 #paper-paper:checked ~ div h2::before,
 #scissors-scissors:checked ~ div h2::before {
-  content: "You Tied!"
+  content: "Fue un empate 😬"
 }
 #rock-paper:checked ~ div h2::before,
 #paper-scissors:checked ~ div h2::before,
 #scissors-rock:checked ~ div h2::before {
-  content: "You Win!"
+  content: "Ganaste COB 🥰"
 }
 #rock-scissors:checked ~ div h2::before,
 #paper-rock:checked ~ div h2::before,
 #scissors-paper:checked ~ div h2::before {
-  content: "Computer Wins!"
+  content: "Lo siento COB has perdido 🫣"
 }
 #message {
   text-align: center;
@@ -206,3 +206,17 @@ label {
 label:nth-of-type(1) { animation-delay: -0.00s; }
 label:nth-of-type(2) { animation-delay: -0.15s; }
 label:nth-of-type(3) { animation-delay: -0.30s; }
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    position: absolute;
+    top: 88%;
+}
+
+footer h6 {
+    font-size: .9em;
+    word-spacing: 2px;
+    font-weight: bold;
+}
