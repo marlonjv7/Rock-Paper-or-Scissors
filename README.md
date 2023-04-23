@@ -1,2 +1,2 @@
-# Rock-Paper-or-Scissors
-juego online
+# Rock-Paper-or-Scissors ✊✋✌️
+juego online de COB
