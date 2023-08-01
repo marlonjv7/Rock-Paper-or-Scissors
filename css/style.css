@@ -135,12 +135,15 @@ input[id^="paper"]:checked ~ div #computer-hand .finger-4 {
 #rock-paper:checked ~ div h2::before,
 #paper-scissors:checked ~ div h2::before,
 #scissors-rock:checked ~ div h2::before {
-  content: "Ganaste COB 🥰"
+  content: "Ganaste"
+  /* content: "Ganaste COB 🥰" */
 }
 #rock-scissors:checked ~ div h2::before,
 #paper-rock:checked ~ div h2::before,
 #scissors-paper:checked ~ div h2::before {
-  content: "Lo siento COB has perdido 🫣"
+  /* content: "Lo siento COB has perdido 🫣" */
+  content: "Lo siento has perdido 🫣"
+
 }
 #message {
   text-align: center;
