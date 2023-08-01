@@ -31,6 +31,7 @@ form {
   flex-direction: column;
 }
 h1 {
+    margin-top: 10px;
   text-align: center;
 }
 #hands {
@@ -84,7 +85,7 @@ div.thumb {
   box-shadow: -17px 6px 0 -15px black;
 }
 div.arm {
-  width: 22px;
+  width: 20px;
   height: 70px;
   left: 20px;
   top: 70px;
@@ -211,12 +212,29 @@ footer {
     display: flex;
     justify-content: center;
     width: 100vw;
-    position: absolute;
-    top: 88%;
+    margin-top: 20px;
 }
 
 footer h6 {
     font-size: .9em;
     word-spacing: 2px;
     font-weight: bold;
+}
+
+@media (max-width: 360px) {
+    #hands {
+        flex-direction: column;
+    }
+
+    #icons {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .hand {
+        width: 150px;
+        height: 150px;
+    }
 }
