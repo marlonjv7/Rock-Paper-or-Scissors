@@ -163,8 +163,8 @@ input:checked ~ #message {
   justify-content: center;
 }
 #icons {
-  width: 30px;
-  height: 200px;
+  width: 60px;
+  height: 100%;
   display: inline-flex;
   flex-direction: column;
 }
@@ -224,20 +224,96 @@ footer h6 {
     font-weight: bold;
 }
 
-@media (max-width: 360px) {
-    #hands {
-        flex-direction: column;
-    }
+@media (max-width: 767px) {
+  #hands {
+      flex-direction: column;
+  }
 
-    #icons {
-        width: 50%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-    }
-    .hand {
-        width: 150px;
-        height: 150px;
-    }
+  #icons {
+      width: 50%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+  }
+  
+  #icons label {
+    margin-top: 10px;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hand {
+      width: 150px;
+      height: 190px;
+  }
+}
+
+@media (max-width: 575px) {
+
+.fist {
+  height: 95px;
+  left: 40px;
+  top: 55px;
+  width: 70px;
+  border-radius: 20px 0 0 20px;
+}
+.finger {
+  width: 55px;
+  height: 25px;
+  border-radius: 20px;
+  left: 80px;
+  transform-origin: 0 50%;
+}
+.finger-1 { top: 55px; --dif: 0px; }
+.finger-2 { top: 78px; left: 84px; --dif: 4px; }
+.finger-3 { top: 101px; --dif: 0px; }
+.finger-4 { top: 124px; height: 26px; left: 76px; --dif: -8px; }
+div.thumb {
+  width: 30px;
+  height: 60px;
+  
+  border-radius: 0 20px 20px 20px;
+  top: 55px;
+  left: 70px;
+  border-left: 0 solid;
+  box-shadow: -15px 4px 0 -14px black;
+}
+div.arm {
+  width: 18px;
+  height: 58px;
+  left: 22px;
+  top: 74px;
+  border: 0;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+input[id$="scissors"]:checked ~ div #user-hand .finger-1,
+input[id^="scissors"]:checked ~ div #computer-hand .finger-1 {
+  width: 88px;
+}
+input[id$="scissors"]:checked ~ div #user-hand .finger-2,
+input[id^="scissors"]:checked ~ div #computer-hand .finger-2 {
+  width: 84px;
+}
+
+input[id$="paper"]:checked ~ div #user-hand .finger-1,
+input[id$="paper"]:checked ~ div #user-hand .finger-2,
+input[id$="paper"]:checked ~ div #user-hand .finger-3,
+input[id$="paper"]:checked ~ div #user-hand .finger-4,
+input[id^="paper"]:checked ~ div #computer-hand .finger-1,
+input[id^="paper"]:checked ~ div #computer-hand .finger-2,
+input[id^="paper"]:checked ~ div #computer-hand .finger-3,
+input[id^="paper"]:checked ~ div #computer-hand .finger-4 {
+  left: calc(84px + var(--dif));
+  width: 75px;
+}
+}
+
+@media (max-width: 468px) {
+    
 }
